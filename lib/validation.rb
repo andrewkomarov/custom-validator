@@ -61,12 +61,12 @@ module Validation
 
   def format(attr, value)
     attr = send(attr).to_s
-    attr && attr.match(value) ? true : false
+    attr && attr.match(value)
   end
 
   def type(attr, value)
     attr = send(attr)
-    attr && attr.kind_of?(value) ? true : false
+    attr && attr.kind_of?(value)
   end
 
 
